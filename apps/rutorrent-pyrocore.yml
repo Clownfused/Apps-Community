@@ -15,7 +15,7 @@
   - name: "Set Known Facts"
     set_fact:
       pgrole: "rutorrent-pyrocore"
-      intport: "443"
+      intport: "80"
       extport: "8999"
       intport2: "51415"
       extport2: "51415"
