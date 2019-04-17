@@ -16,7 +16,7 @@
     set_fact:
       pgrole: "rutorrent-pyrocore"
       intport: "80"
-      extport: "8999"
+      extport: "5411"
       intport2: "51415"
       extport2: "51415"
       intport3: "3000"
