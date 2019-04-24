@@ -15,13 +15,13 @@
   - name: "Set Known Facts"
     set_fact:
       pgrole: "rutorrent-pyrocore"
-      intport: "443"
+      intport: "80"
       extport: "5411"
       intport2: "51415"
       extport2: "51415"
       intport3: "3000"
       extport3: "3000"
-      image: "romancin/rutorrent-flood:latest"
+      image: "clownfused/rutorrent-pyrocore:latest"
 
 # CORE (MANDATORY) ############################################################
   - name: 'Including cron job'
