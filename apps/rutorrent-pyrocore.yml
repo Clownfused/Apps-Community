@@ -25,7 +25,7 @@
       extport4: "51415"
       
       # image: "clownfused/rutorrent-pyrocore:latest"
-      image: "localhost/rutorrent-pyrocore:dev"
+      image: "rutorrent-pyrocore:dev"
 
 # CORE (MANDATORY) ############################################################
   - name: 'Including cron job'
