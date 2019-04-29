@@ -17,11 +17,15 @@
       pgrole: "rutorrent-pyrocore"
       intport: "80"
       extport: "5898"
-      intport2: "51415"
-      extport2: "51415"
-      intport3: "3000"
-      extport3: "3000"
-      image: "clownfused/rutorrent-pyrocore:latest"
+      intport2: "3000"
+      extport2: "3000"
+      intport3: "5000"
+      extport3: "5000"
+      intport4: "51415"
+      extport4: "51415"
+      
+      # image: "clownfused/rutorrent-pyrocore:latest"
+      image: "localhost/rutorrent-pyrocore:dev"
 
 # CORE (MANDATORY) ############################################################
   - name: 'Including cron job'
@@ -45,7 +49,7 @@
       pg_labels:
         traefik.enable: "true"
         traefik.port: "{{intport}}"
-        traefik.frontend.rule: "Host:{{pgrole}}.{{domain.stdout}},{{tldset}}"
+        traefik.frontend.rule: "Host:{{pgrole}}.{{domain.stdout}},{{tldset}},rut.{{domain.stdout}},{{tldset}}"
 
   - name: "Setting PG Volumes"
     set_fact:
@@ -75,6 +79,7 @@
         - '{{extport}}:{{intport}}'
         - '{{ports.stdout}}{{extport2}}:{{intport2}}'
         - '{{ports.stdout}}{{extport3}}:{{intport3}}'
+        - '{{ports.stdout}}{{extport4}}:{{intport4}}'
       volumes: "{{pg_volumes}}"
       env: "{{pg_env}}"
       restart_policy: always
