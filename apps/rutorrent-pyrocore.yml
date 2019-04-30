@@ -70,8 +70,11 @@
 
   - name: "Deploying Container - {{pgrole}}"
     docker_container:
-      name: "{{pgrole}}"
-      image: "{{image}}"
+      name: "rutorrent-pyrocore"
+      state: present
+      load_path: ~/rutorrent-pyrocore.dev.tar.gz
+      tag: dev
+      
       pull: no
       published_ports:
         - '{{extport}}:{{intport}}'
