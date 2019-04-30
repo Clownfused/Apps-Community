@@ -23,8 +23,7 @@
       extport3: "5000"
       intport4: "51415"
       extport4: "51415"
-     
-    image: "localhost/rutorrent-pyrocore:dev"
+      image: "localhost/rutorrent-pyrocore:dev"
     
 # CORE (MANDATORY) ############################################################
   - name: 'Including cron job'
