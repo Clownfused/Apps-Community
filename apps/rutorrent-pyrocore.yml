@@ -23,12 +23,9 @@
       extport3: "5000"
       intport4: "51415"
       extport4: "51415"
-      # image: "clownfused/rutorrent-pyrocore:latest"
-    docker_image:
-      name: localhost/rutorrent-pyrocore
-      tag: dev
-      pull: no
-
+     
+    image: "localhost/rutorrent-pyrocore:dev"
+    
 # CORE (MANDATORY) ############################################################
   - name: 'Including cron job'
     include_tasks: '/opt/communityapps/apps/_core.yml'
@@ -76,7 +73,7 @@
     docker_container:
       name: "{{pgrole}}"
       image: "{{image}}"
-      pull: yes
+      pull: no
       published_ports:
         - '{{extport}}:{{intport}}'
         - '{{ports.stdout}}{{extport2}}:{{intport2}}'
