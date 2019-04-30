@@ -23,7 +23,7 @@
       extport3: "5000"
       intport4: "51415"
       extport4: "51415"
-      image: "rutorrent-pyrocore:dev"
+      #image: "rutorrent-pyrocore:dev"
     
 # CORE (MANDATORY) ############################################################
   - name: 'Including cron job'
@@ -71,10 +71,9 @@
   - name: "Deploying Container - {{pgrole}}"
     docker_container:
       name: "rutorrent-pyrocore"
-      state: present
-      load_path: ~/rutorrent-pyrocore.dev.tar.gz
       tag: dev
-      
+      state: present
+      load_path: /home/clownfused/rutorrent-pyrocore.dev.tar.gz
       pull: no
       published_ports:
         - '{{extport}}:{{intport}}'
