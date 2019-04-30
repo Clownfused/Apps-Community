@@ -23,9 +23,11 @@
       extport3: "5000"
       intport4: "51415"
       extport4: "51415"
-      
       # image: "clownfused/rutorrent-pyrocore:latest"
-      image: "rutorrent-pyrocore:dev"
+    docker_image:
+      name: localhost/rutorrent-pyrocore
+      tag: dev
+      pull: no
 
 # CORE (MANDATORY) ############################################################
   - name: 'Including cron job'
