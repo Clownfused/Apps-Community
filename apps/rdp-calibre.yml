@@ -48,8 +48,11 @@
           - '{{path.stdout}}:{{path.stdout}}'
           - '/mnt/unionfs:/unionfs:rw'
           - '/mnt:/mnt:rw'
-          - '/etc/localtime:/etc/localtime:ro'
           - '/mnt/unionfs/libary:/library:rw'
+
+    - name: 'Set timezone to America/Los_Angeles'
+      timezone:
+        name: America/Los_Angeles
 
     - name: 'Setting PG ENV'
       set_fact:
