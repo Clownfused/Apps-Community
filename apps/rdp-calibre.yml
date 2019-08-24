@@ -48,7 +48,15 @@
           - '{{path.stdout}}:{{path.stdout}}'
           - '/mnt/unionfs:/unionfs:rw'
           - '/mnt:/mnt:rw'
-          - '/mnt/unionfs/libary:/library:rw'
+          - '/mnt/unionfs/books/:/books:rw'
+          - '/mnt/unionfs/books/ebooks/:/ebooks:rw'
+          - '/mnt/unionfs/books/ebooks/calibre:/calibre:rw'
+          - '/mnt/unionfs/books/ebooks/calibre/libraries:/libraries:rw'
+          - '/mnt/unionfs/books/ebooks/calibre/libraries/clownfused:/clownfused:rw'
+          - '/mnt/unionfs/books/ebooks/calibre/libraries/nadper:/nadper:rw'
+          - '/mnt/unionfs/books/ebooks/calibre/libraries/lukper:/lukper:rw'
+          - '/mnt/unionfs/books/ebooks/calibre/libraries/rp:/rp:rw'
+          - '/mnt/unionfs/books/ebooks/calibre/libraries/a:/a:rw'
 
     - name: 'Set timezone to America/Los_Angeles'
       timezone:
