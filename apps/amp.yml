@@ -36,7 +36,6 @@
       set_fact:
         pg_volumes:
           - '/opt/appdata/{{pgrole}}:/amp'
-          - '/opt/appdata/{{pgrole}}/amp:/amp'
           - '/opt/appdata/{{pgrole}}/plugins:/amp/plugins'
           - '{{path.stdout}}:{{path.stdout}}'
           - '/mnt:/mnt'
