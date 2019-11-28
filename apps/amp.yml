@@ -16,7 +16,7 @@
         pgrole: 'amp'
         intport: '8080'
         extport: '8087'
-        image: 'joly0/amp:1.9.0.6'
+        image: 'joly0/amp:latest'
 
     - name: 'Including cron job'
       include_tasks: '/opt/communityapps/apps/_core.yml'
