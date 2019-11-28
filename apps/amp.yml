@@ -35,8 +35,7 @@
     - name: 'Setting PG Volumes'
       set_fact:
         pg_volumes:
-          - '/opt/appdata/{{pgrole}}:/amp'
-          - '/opt/appdata/{{pgrole}}/plugins:/amp/plugins'
+          - '/opt/appdata/{{pgrole}}/data:/data'
           - '{{path.stdout}}:{{path.stdout}}'
           - '/mnt:/mnt'
           - '/etc/localtime:/etc/localtime:ro'
