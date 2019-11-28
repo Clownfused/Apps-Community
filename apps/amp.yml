@@ -16,7 +16,7 @@
         pgrole: 'amp'
         intport: '8080'
         extport: '8080'
-        image: 'cubecoders/ampbase:kitchenskink'
+        image: 'cubecoders/ampbase:kitchensink'
 
     - name: 'Including cron job'
       include_tasks: '/opt/communityapps/apps/_core.yml'
