@@ -47,6 +47,8 @@
         pg_env:
           PUID: '1000'
           PGID: '1000'
+          USERNAME: 'admin'
+          PASSWORD: 'changeme'
 
     # MAIN SCRIPT ##############################################################
 
