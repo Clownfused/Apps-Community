@@ -15,7 +15,7 @@
       set_fact:
         pgrole: 'amp'
         intport: '8080'
-        extport: '8087'
+        extport: '8080'
         image: 'joly0/amp:Stable'
 
     - name: 'Including cron job'
